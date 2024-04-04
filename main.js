@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import TWEEN from './lib/tween.js';
-import { TrackballControls } from './lib/controls/TrackballControls.js';
-import { CSS3DRenderer, CSS3DObject } from './lib/renderers/CSS3DRenderer.js';
+import { TrackballControls } from './lib/TrackballControls.js';
+import { CSS3DRenderer, CSS3DObject } from './lib/CSS3DRenderer.js';
 
 const sheetURL = 'https://docs.google.com/spreadsheets/d/1haGHGP97Ryk123gVQZRWVlw8ufe4CnCbGVjCJkz4vdE/gviz/tq?tqx=out:csv';
 const table = [];
