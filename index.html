@@ -24,6 +24,14 @@
             color: #ffffff;
         }
 
+		#close {
+			position: absolute;
+			top: 38%;right: 28%;
+			padding: 5px;
+			background-color: ghostwhite;
+			cursor: pointer;
+		}
+
         #login {
             position: absolute;
             z-index: 1;
@@ -127,26 +135,28 @@
     </script>
     <script src="https://accounts.google.com/gsi/client" async></script>
     <script type="module" src="./main.js"></script>
-    <script>
-	function g_id_callback(response){
-		if(response.credential){
-			document.querySelector('#login').style.display = 'none';
-			document.querySelector('#container').style.display = '';
-			document.querySelector('#menu').style.display = '';
+	<script>
+		function handleResponse(response){
+			if(response.credential){
+				showEmployeeTable();
+			}
 		}
-	}
+		function showEmployeeTable(){
+			document.querySelector('#login').style.display = 'none';
+		}
     </script>
 </head>
 <body>
     <div id="login">
         <div>
+			<span id="close" onclick="showEmployeeTable()">X</span>
             <h2 style="color: dimgrey;">Welcome</h2>
             <i style="margin-bottom: 30px;">This assignment is for Kasatria's assigment.</i>
             <div id="g_id_onload"
                 data-client_id="526185094704-3shkkf8n3qlolobpme1ame32594mgjip.apps.googleusercontent.com"
-                data-callback="g_id_callback">
+				data-callback="handleResponse">
             </div>
-            <div class="g_id_signin" data-type="standard"></div>
+			<div class="g_id_signin" data-type="standard"></div>
         </div>
     </div>
 
