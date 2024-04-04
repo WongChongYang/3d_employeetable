@@ -9,4 +9,5 @@ Requirements:
 6. Display the grid display in the arragement of 20x10
 
 Disclaimer: This is an assignment to demostrate my web development skills. I do not have ownership to the data source.
-Resource: https://threejs.org/examples/#css3d_periodictable
+
+Resource: https://threejs.org/examples/#css3d_periodictable.
